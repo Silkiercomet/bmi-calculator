@@ -6,3 +6,6 @@
     --PureWhite: #FFFFFF;
     --gradient: linear-gradient(290.1deg,#D6E6FE 0%,rgba(214,252,254,0) 100%);
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
