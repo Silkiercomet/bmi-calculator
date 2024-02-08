@@ -1,0 +1,22 @@
+{
+  "name": "bmi-calculator-main",
+  "version": "1.0.0",
+  "description": "a body mass index calculator in metric and imperial system",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silkiercomet/bmi-calculator.git"
+  },
+  "author": "luis colina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silkiercomet/bmi-calculator/issues"
+  },
+  "homepage": "https://github.com/Silkiercomet/bmi-calculator#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
