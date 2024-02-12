@@ -4,8 +4,10 @@
     --DarkElectricBlue: #5E6E85;
     --Border: #D8E2E7;
     --PureWhite: #FFFFFF;
-    --gradient: linear-gradient(290.1deg,#D6E6FE 0%,rgba(214,252,254,0) 100%);
+    --gradient: linear-gradient(290.1deg,#D6E6FE 0%,#d6fcfe00 100%);
+
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
