@@ -68,7 +68,7 @@
     </main>
 
 
-    <section role="complementary" aria-label="BMI calculator information" class="grid grid-cols-2  p-8">
+    <section role="complementary" aria-label="BMI calculator information" class="grid grid-cols-2  p-8 ">
       <img
         src="assets/images/image-man-eating.webp"
         alt="image of man happily eating"
@@ -85,33 +85,34 @@
         </p>
       </div>
     </section>
-    <section role="complementary" aria-label="Health Tips">
-      <ul>
-        <li>
+
+    <section role="complementary" aria-label="Health Tips" class="max-w-7xl grid place-items-center mx-auto my-24">
+      <ul class="flex flex-wrap md:flex-col lg:flex-row mx-auto gap-6 justify-center align-middle">
+        <li class="max-w-sm">
           <img src="assets/images/icon-eating.svg" alt="null" />
           <div>
             <p>
-              <strong class="block">Healthy eating</strong>Healthy eating
+              <strong class="block py-8 font-medium text-xl">Healthy eating</strong>Healthy eating
               promotes weight control, disease prevention, better digestion,
               immunity, mental clarity, and mood.
             </p>
           </div>
         </li>
-        <li>
+        <li class="max-w-sm">
           <img src="assets/images/icon-exercise.svg" alt="null" />
           <div>
             <p>
-              <strong class="block">Regular exercise</strong>Exercise improves
+              <strong class="block py-8 font-medium text-xl">Regular exercise</strong>Exercise improves
               fitness, aids weight control, elevates mood, and reduces disease
               risk, fostering wellness and longevity.
             </p>
           </div>
         </li>
-        <li>
+        <li class="max-w-sm">
           <img src="assets/images/icon-sleep.svg" alt="null" />
           <div>
             <p>
-              <strong class="block">Adequate sleep</strong>Sleep enhances mental
+              <strong class="block py-8 font-medium text-xl">Adequate sleep</strong>Sleep enhances mental
               clarity, emotional stability, and physical wellness, promoting
               overall restoration and rejuvenation.
             </p>
@@ -119,9 +120,9 @@
         </li>
       </ul>
     </section>
-    <section role="complementary" aria-label="BMI warning">
-      <div>
-        <h5>Limitations of BMI</h5>
+    <section role="complementary" aria-label="BMI warning" class="flex flex-col justify-center items-center px-10 gap-6">
+      <div class="grid place-items-center gap-6">
+        <h5 class="font-bold text-3xl">Limitations of BMI</h5>
         <p>
           Although BMI is often a practical indicator of healthy weight, it is
           not suited for every person. Specific groups should carefully consider
@@ -129,32 +130,32 @@
           beneficial to use.
         </p>
       </div>
-      <ol>
-        <li>
+      <ul class="flex flex-wrap justify-center mx-auto">
+        <li  class="max-w-80 shadow-xl p-6 grid gap-4">
           <p>
-            <strong class="block"
+            <strong class="flex flex-col  gap-4 md:flex-row "
               ><i
                 ><img
                   src="assets/images/icon-gender.svg"
-                  alt="genders symbols" /></i></strong
-            >Gender
+                  alt="genders symbols" /></i>Gender</strong
+            >
           </p>
           The development and body fat composition of girls and boys vary with
           age. Consequently, a child's age and gender are considered when
           evaluating their BMI.
         </li>
-        <li>
+        <li class="max-w-80 shadow-xl p-6 grid gap-8">
           <p>
-            <strong class="block"
+            <strong class="flex items-center justify-canter gap-4"
               ><i><img src="assets/images/icon-age.svg" alt="age icon" /></i
               >Age</strong
             >In aging individuals, increased body fat and muscle loss may cause
             BMI to underestimate body fat content.
           </p>
         </li>
-        <li>
+        <li class="max-w-80 shadow-xl p-6 grid gap-8">
           <p>
-            <strong class="block"
+            <strong class="flex items-center justify-canter gap-4"
               ><i
                 ><img
                   src="assets/images/icon-muscle.svg"
@@ -164,9 +165,9 @@
             it doesn't differentiate muscle from fat.
           </p>
         </li>
-        <li>
+        <li class="max-w-80 shadow-xl p-6 grid gap-8">
           <p>
-            <strong class="block"
+            <strong class="flex items-center justify-canter gap-4"
               ><i
                 ><img
                   src="assets/images/icon-pregnancy.svg"
@@ -177,9 +178,9 @@
             health risks for both mother and child.
           </p>
         </li>
-        <li>
+        <li class="max-w-80 shadow-xl p-6 grid gap-8">
           <p>
-            <strong class="block"
+            <strong class="flex items-center justify-canter gap-4"
               ><i><img src="assets/images/icon-race.svg" alt="race icon" /></i
               >Race</strong
             >Certain health concerns may affect individuals of some Black and
@@ -187,7 +188,7 @@
             advised to discuss this with your GP or practice nurse.
           </p>
         </li>
-      </ol>
+      </ul>
     </section>
     <script src="script.js"></script>
   </body>
