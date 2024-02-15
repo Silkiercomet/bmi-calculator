@@ -19,11 +19,16 @@
     <!-- entender la escala de valores por ejemplo 4 siempre sera 16px/1rem 👍 -->
   </head>
   <body class="text-gunmetal">
-    <main class="min-h-[85vh] max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative rounded-br-3xl px-8 py-10 space-y-8">
+    <main
+      class="min-h-[85vh] max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative rounded-br-3xl px-8 py-10 space-y-8"
+    >
       <img src="assets/images/logo.svg" alt="bmi logo" />
 
       <div class="space-y-8">
-        <h1 class=" text-5xl font-semibold ">Body Mass<br> Index Calculator</h1>
+        <h1 class="text-5xl font-semibold">
+          Body Mass<br />
+          Index Calculator
+        </h1>
         <p class="max-w-prose">
           Better understand your weight in relation to your height using our
           body mass index (BM) calculator. While BMI is not the sole determinant
@@ -32,29 +37,58 @@
         </p>
       </div>
 
-      <section class="grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] absolute top-1/2  -translate-y-1/2 -right-36 p-8 max-w-lg gap-4">
+      <section
+        class="grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] absolute top-1/2 -translate-y-1/2 -right-36 p-8 max-w-lg gap-4"
+      >
         <h2 class="text-2xl font-bold">Enter your details below</h2>
         <div class="grid gap-6">
           <fieldset aria-label="Measurement Units">
-            <ul class="grid grid-cols-2 grid-rows-1 justify-between align-middle">
+            <ul
+              class="grid grid-cols-2 grid-rows-1 justify-between align-middle"
+            >
               <li>
-                <label for="metric" class="inline-flex items-center before:content-[''] before:cursor-pointer before:block before:h-5 before:w-5 before:border-solid before:border-borderBlue before:rounded-full before:mr-2">metric</label>
+                <label
+                  for="metric"
+                  class="inline-flex items-center before:content-[''] before:cursor-pointer before:block before:h-5 before:w-5 before:border-solid before:border-borderBlue before:rounded-full before:mr-2"
+                  >metric</label
+                >
                 <input type="radio" name="metric" id="metric" />
               </li>
               <li>
-                <label for="imperial" class="inline-flex items-center before:content-[''] before:w-4 before:h-4 before:p-2 before:border-solid before:border-b-rayBlue before:bg-rayBlue before:rounded-full before:mr-2">imperial</label>
-                <input type="radio" name="metric" id="imperial"  class="hidden" />
+                <label
+                  for="imperial"
+                  class="inline-flex items-center before:content-[''] before:w-4 before:h-4 before:p-2 before:border-solid before:border-b-rayBlue before:bg-rayBlue before:rounded-full before:mr-2"
+                  >imperial</label
+                >
+                <input
+                  type="radio"
+                  name="metric"
+                  id="imperial"
+                  class="hidden"
+                />
               </li>
             </ul>
           </fieldset>
           <form aria-label="BMI calculator form" class="flex gap-4">
             <div class="grid grid-rows-1 gap-2">
               <label for="height" class="text-electricBlue">height</label>
-              <input type="text" name="height" id="height" placeholder="cm" class="border-solid border border-borderBlue rounded-lg py-2 px-4"/>
+              <input
+                type="text"
+                name="height"
+                id="height"
+                placeholder="cm"
+                class="border-solid border border-borderBlue rounded-lg py-2 px-4"
+              />
             </div>
             <div class="grid grid-rows-1 gap-2">
               <label for="weight" class="text-electricBlue">weight</label>
-              <input type="text" name="weight" id="weight" placeholder="kg" class="border-solid border border-borderBlue rounded-lg py-2 px-4"/>
+              <input
+                type="text"
+                name="weight"
+                id="weight"
+                placeholder="kg"
+                class="border-solid border border-borderBlue rounded-lg py-2 px-4"
+              />
             </div>
           </form>
           <div class="p-4 bg-rayBlue rounded-e-full">
@@ -67,14 +101,17 @@
       </section>
     </main>
 
-
-    <section role="complementary" aria-label="BMI calculator information" class="grid grid-cols-2  p-8 ">
+    <section
+      role="complementary"
+      aria-label="BMI calculator information"
+      class="grid grid-cols-1 p-8 gap-10 sm:grid-cols-2"
+    >
       <img
         src="assets/images/image-man-eating.webp"
         alt="image of man happily eating"
       />
-      <div class="grid place-content-center gap-8">
-        <h4 class="text-3xl font-bold ">What your BMI result means</h4>
+      <div class="grid place-content-center sm:place-content-end lg:place-content-center gap-8">
+        <h4 class="text-3xl font-bold">What your BMI result means</h4>
         <p class="max-w-md">
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
           Maintaining a healthy weight may lower your chances of experiencing
@@ -86,15 +123,22 @@
       </div>
     </section>
 
-    <section role="complementary" aria-label="Health Tips" class="max-w-7xl grid place-items-center mx-auto my-24">
-      <ul class="flex flex-wrap md:flex-col lg:flex-row mx-auto gap-6 justify-center align-middle">
-        <li class="max-w-sm">
+    <section
+      role="complementary"
+      aria-label="Health Tips"
+      class="max-w-7xl grid place-items-center mx-auto my-24"
+    >
+      <ul
+        class="flex flex-wrap flex-col lg:flex-row mx-auto gap-6 justify-center align-middle"
+      >
+        <li class="max-w-sm sm:max-w-xl sm:gap-8 md:max-w-sm flex items-center md:flex-col md:items-start md:gap-4">
           <img src="assets/images/icon-eating.svg" alt="null" />
           <div>
             <p>
-              <strong class="block py-8 font-medium text-xl">Healthy eating</strong>Healthy eating
-              promotes weight control, disease prevention, better digestion,
-              immunity, mental clarity, and mood.
+              <strong class="block py-8 font-medium text-xl"
+                >Healthy eating</strong
+              >Healthy eating promotes weight control, disease prevention,
+              better digestion, immunity, mental clarity, and mood.
             </p>
           </div>
         </li>
@@ -102,9 +146,10 @@
           <img src="assets/images/icon-exercise.svg" alt="null" />
           <div>
             <p>
-              <strong class="block py-8 font-medium text-xl">Regular exercise</strong>Exercise improves
-              fitness, aids weight control, elevates mood, and reduces disease
-              risk, fostering wellness and longevity.
+              <strong class="block py-8 font-medium text-xl"
+                >Regular exercise</strong
+              >Exercise improves fitness, aids weight control, elevates mood,
+              and reduces disease risk, fostering wellness and longevity.
             </p>
           </div>
         </li>
@@ -112,15 +157,22 @@
           <img src="assets/images/icon-sleep.svg" alt="null" />
           <div>
             <p>
-              <strong class="block py-8 font-medium text-xl">Adequate sleep</strong>Sleep enhances mental
-              clarity, emotional stability, and physical wellness, promoting
-              overall restoration and rejuvenation.
+              <strong class="block py-8 font-medium text-xl"
+                >Adequate sleep</strong
+              >Sleep enhances mental clarity, emotional stability, and physical
+              wellness, promoting overall restoration and rejuvenation.
             </p>
           </div>
         </li>
       </ul>
     </section>
-    <section role="complementary" aria-label="BMI warning" class="flex flex-col justify-center items-center px-10 gap-6">
+
+
+    <section
+      role="complementary"
+      aria-label="BMI warning"
+      class="flex flex-col justify-center items-center px-10 gap-6"
+    >
       <div class="grid place-items-center gap-6">
         <h5 class="font-bold text-3xl">Limitations of BMI</h5>
         <p>
@@ -130,60 +182,74 @@
           beneficial to use.
         </p>
       </div>
+
+
       <ul class="flex flex-wrap justify-center mx-auto">
-        <li  class="max-w-80 shadow-xl p-6 grid gap-4">
+
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start">
+            <i>
+              <img
+                src="assets/images/icon-gender.svg"
+                alt="genders symbols" />
+            </i>
+            Gender
+          </strong>
           <p>
-            <strong class="flex flex-col  gap-4 md:flex-row "
-              ><i
-                ><img
-                  src="assets/images/icon-gender.svg"
-                  alt="genders symbols" /></i>Gender</strong
-            >
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
           </p>
-          The development and body fat composition of girls and boys vary with
-          age. Consequently, a child's age and gender are considered when
-          evaluating their BMI.
+
         </li>
-        <li class="max-w-80 shadow-xl p-6 grid gap-8">
-          <p>
-            <strong class="flex items-center justify-canter gap-4"
-              ><i><img src="assets/images/icon-age.svg" alt="age icon" /></i
-              >Age</strong
-            >In aging individuals, increased body fat and muscle loss may cause
+        
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4  ">
+          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start">
+            <i>
+              <img src="assets/images/icon-age.svg" alt="age icon" />
+            </i>Age
+          </strong>
+          <p >
+
+            In aging individuals, increased body fat and muscle loss may cause
             BMI to underestimate body fat content.
           </p>
         </li>
-        <li class="max-w-80 shadow-xl p-6 grid gap-8">
+        
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+          ><i
+            ><img
+              src="assets/images/icon-muscle.svg"
+              alt="muscle icon" /></i
+          >Muscle</strong
+        >
           <p>
-            <strong class="flex items-center justify-canter gap-4"
-              ><i
-                ><img
-                  src="assets/images/icon-muscle.svg"
-                  alt="muscle icon" /></i
-              >Muscle</strong
-            >BMI may misclassify muscular individuals as overweight or obese, as
+BMI may misclassify muscular individuals as overweight or obese, as
             it doesn't differentiate muscle from fat.
           </p>
         </li>
-        <li class="max-w-80 shadow-xl p-6 grid gap-8">
-          <p>
-            <strong class="flex items-center justify-canter gap-4"
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
               ><i
                 ><img
                   src="assets/images/icon-pregnancy.svg"
                   alt="pregnacy icon" /></i
               >Pregnancy</strong
-            >Expectant mothers experience weight gain due to their growing baby.
+            >
+          <p>
+            Expectant mothers experience weight gain due to their growing baby.
             Maintaining a healthy pre-pregnancy BMI is advisable to minimise
             health risks for both mother and child.
           </p>
         </li>
-        <li class="max-w-80 shadow-xl p-6 grid gap-8">
-          <p>
-            <strong class="flex items-center justify-canter gap-4"
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
               ><i><img src="assets/images/icon-race.svg" alt="race icon" /></i
               >Race</strong
-            >Certain health concerns may affect individuals of some Black and
+            >
+          <p>
+            Certain health concerns may affect individuals of some Black and
             Asian origins at lower BMIs than others. To learn more, it is
             advised to discuss this with your GP or practice nurse.
           </p>
