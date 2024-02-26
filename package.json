@@ -4,7 +4,8 @@
   "description": "a body mass index calculator in metric and imperial system",
   "main": "script.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "tail" : "npx tailwindcss -i ./style.css -o ./output.css --watch"
   },
   "repository": {
     "type": "git",
