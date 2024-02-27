@@ -18,9 +18,9 @@
     <!-- hacer una chuleta con las propiedades mas comunes que se usan 👍 -->
     <!-- entender la escala de valores por ejemplo 4 siempre sera 16px/1rem 👍 -->
   </head>
-  <body class="text-gunmetal ">
+  <body class="text-gunmetal">
     <main
-      class="min-h-[85vh] xl:max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative rounded-b-3xl px-8 py-10 space-y-8 flex justify-start items-center flex-col mb-[300px] xl:mb-8 xl:items-start xl:gap-10 xl:p-12"
+      class="min-h-[85vh] xl:max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative rounded-b-3xl px-8 py-10 space-y-8 flex justify-start items-center flex-col mb-[300px] xl:mb-8 xl:items-start xl:gap-10 xl:p-12 xl:max-h-[655px] xl:min-h-[595px] 2xl:mx-auto"
     >
       <img src="assets/images/logo.svg" alt="bmi logo" />
 
@@ -36,9 +36,10 @@
           your overall health and well-being.
         </p>
       </div>
-      <!-- absolute top-1/2 -translate-y-1/2 -right-[100%] -->
+
       <section
-        class="grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-8 max-w-lg gap-4 absolute left-1/2 -translate-x-1/2 -bottom-72 sm:-bottom-64 xl:left-auto xl:-right-1/4 xl:-translate-x-0 xl:-translate-y-1/2 xl:top-1/2 xl:max-h-[390px]"
+        class="min-w-[90%] grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-8 lg:max-w-lg lg:min-w-[20%] gap-4 absolute left-1/2 -translate-x-1/2 -bottom-[50%]  xl:left-auto xl:-right-1/4 xl:-translate-x-0 xl:bottom-1/2 xl:translate-y-1/2"
+        id="calculator"
       >
         <h2 class="text-2xl font-bold">Enter your details below</h2>
         <div class="grid gap-6">
@@ -46,51 +47,120 @@
             <ul
               class="grid grid-cols-2 grid-rows-1 justify-between items-center"
             >
-              <li class="flex items-center gap-4">
-                <input type="radio" name="metric" id="metric" class="h-3.5 w-3.5 rounded-full border-[6px] checked:bg-rayBlue checked:border-borderBlue transition-all box-content  appearance-none border-white shadow-md bg-white border-gray-300  outline-none "/>
-                <label
-                  for="metric"
-                  class="text-uppercase font-bold"
+              <li class="flex items-center gap-4 *:cursor-pointer">
+                <input
+                  type="radio"
+                  name="metric"
+                  id="metricInput"
+                  value="metric"
+                  checked
+                  class="h-3.5 w-3.5 rounded-full border-[6px] checked:bg-rayBlue checked:border-borderBlue transition-all box-content appearance-none border-white shadow-md bg-white border-gray-300 outline-none"
+                />
+                <label for="metricInput" class="text-uppercase font-bold"
                   >Metric</label
                 >
-
               </li>
-              <li class="flex items-center gap-4">
+              <li class="flex items-center gap-4 *:cursor-pointer">
                 <input
-                type="radio"
-                name="metric"
-                id="imperial"
-                class="h-3.5 w-3.5 rounded-full border-[6px] checked:bg-rayBlue checked:border-borderBlue transition-all box-content  appearance-none border-white shadow-md bg-white outline-none "
-              />
-                <label
-                  for="imperial"
-                  class="text-uppercase font-bold"
+                  type="radio"
+                  name="metric"
+                  id="imperialInput"
+                  value="imperial"
+                  class="h-3.5 w-3.5 rounded-full border-[6px] checked:bg-rayBlue checked:border-borderBlue transition-all box-content appearance-none border-white shadow-md bg-white outline-none"
+                />
+                <label for="imperialInput" class="text-uppercase font-bold"
                   >Imperial</label
                 >
-
               </li>
             </ul>
           </fieldset>
-          <form aria-label="BMI calculator form" class="flex gap-4">
-            <div class="grid grid-rows-1 gap-2">
-              <label for="height" class="text-electricBlue">height</label>
-              <input
-                type="text"
-                name="height"
-                id="height"
-                placeholder="cm"
-                class="border-solid border border-borderBlue rounded-lg py-2 px-4"
-              />
+          <form aria-label="BMI calculator form">
+            <div id="metricContainer" class="grid grid-cols-2 gap-4">
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['cm'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label for="height" class="text-electricBlue">height</label>
+                <input
+                  type="text"
+                  name="height"
+                  id="height"
+                  placeholder="cm"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['kg'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label for="weight" class="text-electricBlue">weight</label>
+                <input
+                  type="text"
+                  name="weight"
+                  id="weight"
+                  placeholder="kg"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
             </div>
-            <div class="grid grid-rows-1 gap-2">
-              <label for="weight" class="text-electricBlue">weight</label>
-              <input
-                type="text"
-                name="weight"
-                id="weight"
-                placeholder="kg"
-                class="border-solid border border-borderBlue rounded-lg py-2 px-4"
-              />
+
+            <!-- separation of metrics -->
+
+            <div id="imperialContainer" class="grid grid-cols-2 gap-4 hidden">
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['ft'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label for="height" class="text-electricBlue">height</label>
+                <input
+                  type="text"
+                  name="feet"
+                  id="feet"
+                  placeholder="ft"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['in'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label
+                  for="weight"
+                  class="text-electricBlue opacity-0 pointer-events-none"
+                  >weight</label
+                >
+                <input
+                  type="text"
+                  name="inches"
+                  id="inches"
+                  placeholder="in"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['st'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label for="height" class="text-electricBlue">weight</label>
+                <input
+                  type="text"
+                  name="stones"
+                  id="stones"
+                  placeholder="st"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
+              <div
+                class="grid grid-rows-1 gap-2 relative after:content-['lbs'] after:font-bold after:text-rayBlue after:absolute after:bottom-[8.3px] after:right-[16px]"
+              >
+                <label
+                  for="weight"
+                  class="text-electricBlue opacity-0 pointer-events-none"
+                  >weight</label
+                >
+                <input
+                  type="text"
+                  name="pounds"
+                  id="pounds"
+                  placeholder="lbs"
+                  class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
+                />
+              </div>
             </div>
           </form>
           <div class="p-4 bg-rayBlue rounded-e-full">
@@ -106,13 +176,15 @@
     <section
       role="complementary"
       aria-label="BMI calculator information"
-      class="grid grid-cols-1 p-8 gap-10 sm:grid-cols-2 max-w-7xl mx-auto"
+      class="grid grid-cols-1 p-8 mt-16 gap-10 sm:grid-cols-2 sm:mt-4 max-w-7xl mx-auto"
     >
       <img
         src="assets/images/image-man-eating.webp"
         alt="image of man happily eating"
       />
-      <div class="grid place-content-center sm:place-content-end lg:place-content-center gap-8">
+      <div
+        class="grid place-content-center sm:place-content-end lg:place-content-center gap-8"
+      >
         <h4 class="text-3xl font-bold">What your BMI result means</h4>
         <p class="max-w-md">
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
@@ -128,13 +200,19 @@
     <section
       role="complementary"
       aria-label="Health Tips"
-      class="max-w-7xl grid place-items-center mx-auto my-24  "
+      class="max-w-7xl grid place-items-center mx-auto my-24"
     >
       <ul
         class="flex flex-wrap flex-col lg:flex-row mx-auto gap-6 justify-center items-center"
       >
-        <li class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0">
-          <img src="assets/images/icon-eating.svg" alt="null" class="max-w-16 max-h-16"/>
+        <li
+          class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0"
+        >
+          <img
+            src="assets/images/icon-eating.svg"
+            alt="null"
+            class="max-w-16 max-h-16"
+          />
           <div>
             <p>
               <strong class="block py-8 font-medium text-xl"
@@ -144,8 +222,14 @@
             </p>
           </div>
         </li>
-        <li class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0">
-          <img src="assets/images/icon-exercise.svg" alt="null" class="max-w-16 max-h-16"/>
+        <li
+          class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0"
+        >
+          <img
+            src="assets/images/icon-exercise.svg"
+            alt="null"
+            class="max-w-16 max-h-16"
+          />
           <div>
             <p>
               <strong class="block py-8 font-medium text-xl"
@@ -155,8 +239,14 @@
             </p>
           </div>
         </li>
-        <li class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0">
-          <img src="assets/images/icon-sleep.svg" alt="null" class="max-w-16 max-h-16"/>
+        <li
+          class="max-w-sm flex flex-col justify-center sm:flex-row sm:items-center sm:gap-8 sm:max-w-lg lg:flex-col lg:max-w-sm lg:items-start lg:gap-0"
+        >
+          <img
+            src="assets/images/icon-sleep.svg"
+            alt="null"
+            class="max-w-16 max-h-16"
+          />
           <div>
             <p>
               <strong class="block py-8 font-medium text-xl"
@@ -168,7 +258,6 @@
         </li>
       </ul>
     </section>
-
 
     <section
       role="complementary"
@@ -185,15 +274,13 @@
         </p>
       </div>
 
-
       <ul class="flex flex-wrap justify-center mx-auto">
-
         <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
-          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start">
+          <strong
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+          >
             <i>
-              <img
-                src="assets/images/icon-gender.svg"
-                alt="genders symbols" />
+              <img src="assets/images/icon-gender.svg" alt="genders symbols" />
             </i>
             Gender
           </strong>
@@ -202,43 +289,42 @@
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
           </p>
-
         </li>
-        
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4  ">
-          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start">
-            <i>
-              <img src="assets/images/icon-age.svg" alt="age icon" />
-            </i>Age
-          </strong>
-          <p >
 
+        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+          <strong
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+          >
+            <i>
+              <img src="assets/images/icon-age.svg" alt="age icon" /> </i
+            >Age
+          </strong>
+          <p>
             In aging individuals, increased body fat and muscle loss may cause
             BMI to underestimate body fat content.
           </p>
         </li>
-        
+
         <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
-          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
-          ><i
-            ><img
-              src="assets/images/icon-muscle.svg"
-              alt="muscle icon" /></i
-          >Muscle</strong
-        >
+          <strong
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            ><i><img src="assets/images/icon-muscle.svg" alt="muscle icon" /></i
+            >Muscle</strong
+          >
           <p>
-BMI may misclassify muscular individuals as overweight or obese, as
+            BMI may misclassify muscular individuals as overweight or obese, as
             it doesn't differentiate muscle from fat.
           </p>
         </li>
         <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
-          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
-              ><i
-                ><img
-                  src="assets/images/icon-pregnancy.svg"
-                  alt="pregnacy icon" /></i
-              >Pregnancy</strong
-            >
+          <strong
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            ><i
+              ><img
+                src="assets/images/icon-pregnancy.svg"
+                alt="pregnacy icon" /></i
+            >Pregnancy</strong
+          >
           <p>
             Expectant mothers experience weight gain due to their growing baby.
             Maintaining a healthy pre-pregnancy BMI is advisable to minimise
@@ -246,10 +332,11 @@ BMI may misclassify muscular individuals as overweight or obese, as
           </p>
         </li>
         <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
-          <strong class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
-              ><i><img src="assets/images/icon-race.svg" alt="race icon" /></i
-              >Race</strong
-            >
+          <strong
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            ><i><img src="assets/images/icon-race.svg" alt="race icon" /></i
+            >Race</strong
+          >
           <p>
             Certain health concerns may affect individuals of some Black and
             Asian origins at lower BMIs than others. To learn more, it is
