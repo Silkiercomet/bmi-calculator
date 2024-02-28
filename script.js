@@ -1,11 +1,5 @@
 // calculator container
 let calculator__container = document.getElementById("calculator")
-function changePosition(){
-    calculator__container.classList.toggle("-bottom-[60%]")
-    calculator__container.classList.toggle("-bottom-[73%]")
-    calculator__container.classList.toggle("md:-bottom-[50%]")
-    calculator__container.classList.toggle("md:-bottom-[63%]")
-}
 
 // bmi calculation
 
@@ -64,13 +58,11 @@ metric__selector.forEach(e => e.addEventListener("change", function(radio){
         imperial__container.classList.add("hidden")
         metric__container.classList.remove("hidden")
 
-        changePosition()
     } else {
         resetMetricValues()
         imperial__container.classList.remove("hidden")
         metric__container.classList.add("hidden")
 
-        changePosition()
     }
     
 }))
