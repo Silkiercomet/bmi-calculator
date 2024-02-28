@@ -88,7 +88,7 @@ imperial__events.forEach(input => {
             <div class="grid grid-cols-2 items-center max-w-[390px] mx-auto *:text-white ">
             <p>
               Your BMI is...
-              <strong class="block text-5xl">${bmi}</strong>
+              <strong class="block text-2xl sm:text-5xl">${bmi}</strong>
             </p>
             <p>Your BMI suggests you're ${idealWeightRange}. Your ideal weight is between <strong>${idealWeightRangeInKg}</strong></p>
           </div>
@@ -117,7 +117,7 @@ metric__events.forEach(input => {
             <div class="grid grid-cols-2 items-center max-w-[390px] mx-auto *:text-white ">
             <p>
               Your BMI is...
-              <strong class="block text-5xl">${bmi}</strong>
+              <strong class="block text-2xl sm:text-5xl">${bmi}</strong>
             </p>
             <p>Your BMI suggests you're ${idealWeightRange}. Your ideal weight is between <strong>${idealWeightRangeInKg}</strong></p>
           </div>
