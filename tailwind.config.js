@@ -9,6 +9,8 @@ module.exports = {
       'borderBlue' : '#D8E2E7',
       'g-start' : '#D6E6FE',
       'g-ending' : '#d6fcfe00',
+      'g-result-s' : '#345FF7',
+      'g-result-e' : '#587DFF',
       'white': '#fff'
     },
     extend: {},

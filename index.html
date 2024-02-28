@@ -20,7 +20,7 @@
   </head>
   <body class="text-gunmetal">
     <main
-      class="min-h-[85vh] xl:max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative rounded-b-3xl px-8 py-10 space-y-8 flex justify-start items-center flex-col mb-[300px] xl:mb-8 xl:items-start xl:gap-10 xl:p-12 xl:max-h-[655px] xl:min-h-[595px] 2xl:mx-auto"
+      class="min-h-[85vh] xl:max-w-5xl bg-gradient-to-l from-g-start to-g-ending relative sm:mb-[390px] md:mb-[250px] rounded-b-3xl px-8 py-10 space-y-8 flex justify-start items-center flex-col mb-[300px]  xl:mb-8 xl:items-start xl:gap-10 xl:p-12 xl:max-h-[655px] xl:min-h-[595px] 2xl:mx-auto"
     >
       <img src="assets/images/logo.svg" alt="bmi logo" />
 
@@ -38,7 +38,7 @@
       </div>
 
       <section
-        class="min-w-[90%] grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-8 lg:max-w-lg lg:min-w-[20%] gap-4 absolute left-1/2 -translate-x-1/2 -bottom-[50%]  xl:left-auto xl:-right-1/4 xl:-translate-x-0 xl:bottom-1/2 xl:translate-y-1/2"
+        class="min-w-[90%] grid bg-[#fff] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-8 lg:max-w-lg lg:min-w-[20%] gap-4 absolute left-1/2 -translate-x-1/2 -bottom-[60%] md:-bottom-[50%]  xl:left-auto xl:-right-1/4 xl:-translate-x-0 xl:bottom-1/2 xl:translate-y-1/2"
         id="calculator"
       >
         <h2 class="text-2xl font-bold">Enter your details below</h2>
@@ -84,7 +84,7 @@
                   type="text"
                   name="height"
                   id="height"
-                  placeholder="cm"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
@@ -96,7 +96,7 @@
                   type="text"
                   name="weight"
                   id="weight"
-                  placeholder="kg"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
@@ -113,7 +113,7 @@
                   type="text"
                   name="feet"
                   id="feet"
-                  placeholder="ft"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
@@ -129,7 +129,7 @@
                   type="text"
                   name="inches"
                   id="inches"
-                  placeholder="in"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
@@ -141,7 +141,7 @@
                   type="text"
                   name="stones"
                   id="stones"
-                  placeholder="st"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
@@ -157,13 +157,13 @@
                   type="text"
                   name="pounds"
                   id="pounds"
-                  placeholder="lbs"
+                  placeholder="0"
                   class="border-solid border border-borderBlue rounded-lg py-2 px-4 min-w-full"
                 />
               </div>
             </div>
           </form>
-          <div class="p-4 bg-rayBlue rounded-e-full">
+          <div class="p-4 bg-gradient-to-r min-h-[128px] from-g-result-s to-g-result-e  rounded-l-lg rounded-r-[80px] " id="resultContainer">
             <h3 class="text-white font-bold text-2xl">Welcome!</h3>
             <p class="text-white pt-2">
               Enter your height and weight and you'll see your BMI result here
@@ -176,7 +176,7 @@
     <section
       role="complementary"
       aria-label="BMI calculator information"
-      class="grid grid-cols-1 p-8 mt-16 gap-10 sm:grid-cols-2 sm:mt-4 max-w-7xl mx-auto"
+      class="grid grid-cols-1 p-8 md:mt-16 gap-10 sm:grid-cols-2 lg:mt-4 max-w-7xl mx-auto"
     >
       <img
         src="assets/images/image-man-eating.webp"
@@ -262,10 +262,10 @@
     <section
       role="complementary"
       aria-label="BMI warning"
-      class="flex flex-col justify-center items-center px-10 gap-6 max-w-7xl mx-auto"
+      class="flex flex-col justify-center items-center px-10 gap-6 max-w-7xl mx-auto xl:flex-row xl:pb-[640px] relative"
     >
-      <div class="grid place-items-center gap-6">
-        <h5 class="font-bold text-3xl">Limitations of BMI</h5>
+      <div class="grid place-items-center gap-6 xl:place-items-left xl:flex-1 ">
+        <h5 class="font-bold text-3xl xl:text-left">Limitations of BMI</h5>
         <p>
           Although BMI is often a practical indicator of healthy weight, it is
           not suited for every person. Specific groups should carefully consider
@@ -274,10 +274,10 @@
         </p>
       </div>
 
-      <ul class="flex flex-wrap justify-center mx-auto">
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+      <ul class="flex flex-wrap justify-center mx-auto flex-1 -xl:translate-x-9">
+        <li class="sm:max-w-80 shadow-xl p-8 flex flex-col gap-4">
           <strong
-            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start text-xl font-semibold"
           >
             <i>
               <img src="assets/images/icon-gender.svg" alt="genders symbols" />
@@ -291,9 +291,9 @@
           </p>
         </li>
 
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+        <li class="sm:max-w-80 shadow-xl p-8 flex flex-col gap-4 xl:absolute xl:top-[290px] xl:right-[320px] xl:h-[208px]">
           <strong
-            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start text-xl font-semibold"
           >
             <i>
               <img src="assets/images/icon-age.svg" alt="age icon" /> </i
@@ -305,9 +305,9 @@
           </p>
         </li>
 
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+        <li class="sm:max-w-80 shadow-xl p-8 flex flex-col gap-4 xl:absolute xl:top-[290px] xl:right-0 xl:min-h-[170px]">
           <strong
-            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start text-xl font-semibold"
             ><i><img src="assets/images/icon-muscle.svg" alt="muscle icon" /></i
             >Muscle</strong
           >
@@ -316,9 +316,9 @@
             it doesn't differentiate muscle from fat.
           </p>
         </li>
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+        <li class="sm:max-w-80 shadow-xl p-8 flex flex-col gap-4 xl:absolute xl:top-[580px] xl:right-[120px] xl: ">
           <strong
-            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start text-xl font-semibold"
             ><i
               ><img
                 src="assets/images/icon-pregnancy.svg"
@@ -331,9 +331,9 @@
             health risks for both mother and child.
           </p>
         </li>
-        <li class="max-w-80 shadow-xl p-8 flex flex-col gap-4">
+        <li class="sm:max-w-80 shadow-xl p-8 flex flex-col gap-4 xl:absolute xl:top-[580px] xl:right-[470px]">
           <strong
-            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start"
+            class="flex flex-col gap-4 sm:flex-row sm:items-center justify-start text-xl font-semibold"
             ><i><img src="assets/images/icon-race.svg" alt="race icon" /></i
             >Race</strong
           >
